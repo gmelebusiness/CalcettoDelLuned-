@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T10:25:17.048Z",
+ "updatedAt": "2026-10-12T10:37:58.584Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 7,
  "keepers": false,
@@ -60,19 +60,15 @@
    "at": "2026-10-06T11:28:55.000Z"
   },
   {
-   "name": "Davide Del.",
-   "at": "2026-10-06T11:29:00.000Z"
-  },
-  {
    "name": "Riccardo Pal.",
    "at": "2026-10-06T11:33:00.000Z"
-  }
- ],
- "riserve": [
+  },
   {
    "name": "Riccardo Pan.",
    "at": "2026-10-09T08:10:00.000Z"
-  },
+  }
+ ],
+ "riserve": [
   {
    "name": "Gabriele Per.",
    "at": "2026-10-06T11:36:00.000Z"
@@ -88,9 +84,13 @@
   {
    "name": "Pierandrea Con.",
    "at": "2026-10-06T11:47:00.000Z"
+  },
+  {
+   "name": "Matteo But.",
+   "at": "2026-10-06T12:41:00.000Z"
   }
  ],
  "missing": 0,
  "lineupAt": "2026-10-11T08:00:00.000Z",
- "lineupSentAt": "2026-10-12T10:25:16.736Z"
+ "lineupSentAt": "2026-10-12T10:37:58.277Z"
 }
