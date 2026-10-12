@@ -1,9 +1,9 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T04:23:32.187Z",
+ "updatedAt": "2026-10-12T04:33:08.736Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
- "field": 6,
- "keepers": false,
+ "field": 7,
+ "keepers": true,
  "needed": 12,
  "nextPollAt": "2026-10-13T11:28:00.000Z",
  "nextWeek": "2026-10-19",
