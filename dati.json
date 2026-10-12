@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T09:53:11.104Z",
+ "updatedAt": "2026-10-12T10:08:09.909Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 7,
  "keepers": false,
@@ -16,15 +16,15 @@
    "at": "2026-10-06T11:28:00.000Z"
   },
   {
-   "name": "Simone M.",
+   "name": "Simone Mor.",
    "at": "2026-10-06T11:28:05.000Z"
   },
   {
-   "name": "Andrea R.",
+   "name": "Andrea Ros.",
    "at": "2026-10-06T11:28:10.000Z"
   },
   {
-   "name": "Alessandro A.",
+   "name": "Alessandro Asd.",
    "at": "2026-10-06T11:28:15.000Z"
   },
   {
@@ -32,65 +32,65 @@
    "at": "2026-10-06T11:28:20.000Z"
   },
   {
-   "name": "Federico S.",
+   "name": "Federico Ser.",
    "at": "2026-10-06T11:28:25.000Z"
   },
   {
-   "name": "Stefano P.",
+   "name": "Stefano Pre.",
    "at": "2026-10-09T07:13:00.000Z"
   },
   {
-   "name": "Speedy ⚡.",
+   "name": "Speedy ⚡",
    "at": "2026-10-06T11:28:30.000Z"
   },
   {
-   "name": "Carlo C.",
+   "name": "Carlo Cam.",
    "at": "2026-10-06T11:28:35.000Z"
   },
   {
-   "name": "Riccardo D.",
+   "name": "Riccardo De D.",
    "at": "2026-10-12T09:53:10.794Z"
   },
   {
-   "name": "Riccardo L.",
+   "name": "Riccardo Lit.",
    "at": "2026-10-06T11:28:40.000Z"
   },
   {
-   "name": "Francesco A.",
+   "name": "Francesco Ant.",
    "at": "2026-10-06T11:28:45.000Z"
   },
   {
-   "name": "Tommy P.",
+   "name": "Tommy Pet.",
    "at": "2026-10-06T11:28:55.000Z"
   },
   {
-   "name": "Davide D.",
+   "name": "Davide Del.",
    "at": "2026-10-06T11:29:00.000Z"
   }
  ],
  "riserve": [
   {
-   "name": "Riccardo P.",
+   "name": "Riccardo Pal.",
    "at": "2026-10-06T11:33:00.000Z"
   },
   {
-   "name": "Riccardo P.",
+   "name": "Riccardo Pan.",
    "at": "2026-10-09T08:10:00.000Z"
   },
   {
-   "name": "Gabriele P.",
+   "name": "Gabriele Per.",
    "at": "2026-10-06T11:36:00.000Z"
   },
   {
-   "name": "Checco C.",
+   "name": "Checco Cap.",
    "at": "2026-10-06T11:43:00.000Z"
   },
   {
-   "name": "Giordano T.",
+   "name": "Giordano Tau.",
    "at": "2026-10-06T11:46:00.000Z"
   },
   {
-   "name": "Pierandrea C.",
+   "name": "Pierandrea Con.",
    "at": "2026-10-06T11:47:00.000Z"
   }
  ],
