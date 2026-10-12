@@ -1,18 +1,18 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T00:03:12.079Z",
- "title": "",
- "week": null,
- "label": null,
- "status": "nessuna",
+ "updatedAt": "2026-10-12T00:03:39.993Z",
+ "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 6,
  "keepers": false,
  "needed": 12,
+ "nextPollAt": "2026-10-13T11:28:00.000Z",
+ "nextWeek": "2026-10-19",
+ "week": null,
+ "label": null,
+ "status": "nessuna",
  "convocati": [],
  "riserve": [],
  "missing": 0,
  "lineupAt": null,
- "lineupSentAt": null,
- "nextPollAt": null,
- "nextWeek": null
+ "lineupSentAt": null
 }
