@@ -1,18 +1,132 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T04:33:10.619Z",
+ "updatedAt": "2026-10-12T05:26:34.987Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 7,
  "keepers": false,
  "needed": 14,
  "nextPollAt": "2026-10-13T11:28:00.000Z",
  "nextWeek": "2026-10-19",
- "week": null,
- "label": null,
- "status": "nessuna",
- "convocati": [],
- "riserve": [],
+ "week": "2026-10-12",
+ "label": "lunedì 12 ottobre",
+ "status": "provvisoria",
+ "convocati": [
+  {
+   "name": "Giulio",
+   "at": "2026-10-06T11:28:00.000Z"
+  },
+  {
+   "name": "Simone M.",
+   "at": "2026-10-06T11:28:05.000Z"
+  },
+  {
+   "name": "Andrea R.",
+   "at": "2026-10-06T11:28:10.000Z"
+  },
+  {
+   "name": "Alessandro A.",
+   "at": "2026-10-06T11:28:15.000Z"
+  },
+  {
+   "name": "Piero",
+   "at": "2026-10-06T11:28:20.000Z"
+  },
+  {
+   "name": "Federico S.",
+   "at": "2026-10-06T11:28:25.000Z"
+  },
+  {
+   "name": "Speedy ⚡.",
+   "at": "2026-10-06T11:28:30.000Z"
+  },
+  {
+   "name": "Carlo C.",
+   "at": "2026-10-06T11:28:35.000Z"
+  },
+  {
+   "name": "Riccardo L.",
+   "at": "2026-10-06T11:28:40.000Z"
+  },
+  {
+   "name": "Francesco A.",
+   "at": "2026-10-06T11:28:45.000Z"
+  },
+  {
+   "name": "Gianmarco P.",
+   "at": "2026-10-06T11:28:50.000Z"
+  },
+  {
+   "name": "Tommy P.",
+   "at": "2026-10-06T11:28:55.000Z"
+  },
+  {
+   "name": "Davide D.",
+   "at": "2026-10-06T11:29:00.000Z"
+  },
+  {
+   "name": "Riccardo P.",
+   "at": "2026-10-06T11:33:00.000Z"
+  }
+ ],
+ "riserve": [
+  {
+   "name": "Gabriele P.",
+   "at": "2026-10-06T11:36:00.000Z"
+  },
+  {
+   "name": "Checco C.",
+   "at": "2026-10-06T11:43:00.000Z"
+  },
+  {
+   "name": "Giordano T.",
+   "at": "2026-10-06T11:46:00.000Z"
+  },
+  {
+   "name": "Pierandrea C.",
+   "at": "2026-10-06T11:47:00.000Z"
+  },
+  {
+   "name": "Matteo B.",
+   "at": "2026-10-06T12:41:00.000Z"
+  },
+  {
+   "name": "Enrico C.",
+   "at": "2026-10-09T07:00:00.000Z"
+  },
+  {
+   "name": "Stefano P.",
+   "at": "2026-10-09T07:13:00.000Z"
+  },
+  {
+   "name": "Riccardo P.",
+   "at": "2026-10-09T08:10:00.000Z"
+  },
+  {
+   "name": "SBR_Impianti",
+   "at": "2026-10-09T18:34:05.825Z"
+  },
+  {
+   "name": "Graziano V.",
+   "at": "2026-10-09T18:34:08.202Z"
+  },
+  {
+   "name": "Pierfra C.",
+   "at": "2026-10-09T18:34:09.654Z"
+  },
+  {
+   "name": "Emanuele🫨",
+   "at": "2026-10-09T18:34:13.268Z"
+  },
+  {
+   "name": "Cristian",
+   "at": "2026-10-09T18:34:19.423Z"
+  },
+  {
+   "name": "Federico",
+   "at": "2026-10-09T18:34:20.127Z"
+  }
+ ],
  "missing": 0,
- "lineupAt": null,
+ "lineupAt": "2026-10-11T08:00:00.000Z",
  "lineupSentAt": null
 }
