@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-12T05:34:12.776Z",
+ "updatedAt": "2026-10-12T05:40:26.429Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 7,
  "keepers": false,
@@ -9,7 +9,7 @@
  "nextWeek": "2026-10-19",
  "week": "2026-10-12",
  "label": "lunedì 12 ottobre",
- "status": "provvisoria",
+ "status": "definitiva",
  "convocati": [
   {
    "name": "Giulio",
@@ -128,5 +128,5 @@
  ],
  "missing": 0,
  "lineupAt": "2026-10-11T08:00:00.000Z",
- "lineupSentAt": null
+ "lineupSentAt": "2026-10-12T05:34:45.231Z"
 }
