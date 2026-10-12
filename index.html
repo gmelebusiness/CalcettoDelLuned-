@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0c1a12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Calcetto">
+<title>Calcetto · convocati</title>
+<style>
+  :root {
+    --bg: #f4f1ea; --card: #ffffff; --ink: #14201a; --muted: #6a736d; --line: #e4dfd4;
+    --pitch: #1f7a4a; --pitch-ink: #ffffff; --yes: #1f7a4a; --yes-bg: #e3f2e9;
+    --wait: #a86a00; --wait-bg: #fdf1dc; --no: #9a3b2f; --no-bg: #f8e6e2; --accent: #1f7a4a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b110d; --card: #131b16; --ink: #e8efe9; --muted: #8b968f; --line: #222d26;
+      --pitch: #17603a; --pitch-ink: #eaf6ee; --yes: #6fd39b; --yes-bg: #143322;
+      --wait: #f2b54a; --wait-bg: #33270f; --no: #ff8f7f; --no-bg: #3a1c17; --accent: #6fd39b;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; line-height: 1.45;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 0 16px calc(40px + env(safe-area-inset-bottom)); }
+
+  /* Il campo */
+  .hero {
+    margin: 0 -16px 18px; padding: calc(22px + env(safe-area-inset-top)) 20px 22px;
+    background: var(--pitch); color: var(--pitch-ink); position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 40px, transparent 40px 80px),
+      radial-gradient(circle at 50% 120%, transparent 54px, rgba(255,255,255,0.22) 55px, rgba(255,255,255,0.22) 57px, transparent 58px);
+    pointer-events: none;
+  }
+  .hero::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.18); }
+  .hero > * { position: relative; z-index: 1; }
+  .kicker { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
+  .hero h1 { font-size: 30px; line-height: 1.12; font-weight: 750; letter-spacing: -0.015em; margin-top: 4px; }
+  .hero .meta { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { background: rgba(255,255,255,0.16); border-radius: 999px; padding: 3px 10px; font-size: 13px; font-weight: 600; }
+
+  .status { border-radius: 14px; padding: 12px 14px; font-size: 14.5px; margin-bottom: 14px; display: flex; gap: 10px; align-items: flex-start; }
+  .status.live { background: var(--wait-bg); color: var(--wait); }
+  .status.final { background: var(--yes-bg); color: var(--yes); }
+  .status.none { background: var(--card); color: var(--muted); border: 1px solid var(--line); }
+  .status b { font-weight: 700; }
+
+  /* Chi sei */
+  .me { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin-bottom: 18px; }
+  .me label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .me select {
+    width: 100%; font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+    border-radius: 10px; padding: 10px 36px 10px 12px; -webkit-appearance: none; appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position: calc(100% - 18px) 52%, calc(100% - 13px) 52%; background-size: 5px 5px; background-repeat: no-repeat;
+  }
+  .verdict { margin-top: 12px; border-radius: 12px; padding: 14px; display: none; }
+  .verdict.show { display: block; }
+  .verdict .big { font-size: 22px; font-weight: 750; letter-spacing: -0.01em; }
+  .verdict .small { font-size: 14px; margin-top: 2px; opacity: 0.9; }
+  .verdict.yes { background: var(--yes-bg); color: var(--yes); }
+  .verdict.wait { background: var(--wait-bg); color: var(--wait); }
+  .verdict.no { background: var(--no-bg); color: var(--no); }
+
+  h2 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 650; margin: 20px 4px 8px; display: flex; justify-content: space-between; }
+  h2 span { letter-spacing: 0; text-transform: none; font-weight: 600; }
+  ol { list-style: none; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  li { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-top: 1px solid var(--line); }
+  li:first-child { border-top: 0; }
+  li .n { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; background: var(--yes-bg); color: var(--yes); flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .riserve li .n { background: var(--wait-bg); color: var(--wait); }
+  li .who { flex: 1; font-size: 16px; font-weight: 550; min-width: 0; overflow-wrap: anywhere; }
+  li .t { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  li.mine { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 12px; }
+  .missing { margin: 10px 4px 0; color: var(--wait); font-weight: 650; font-size: 14.5px; }
+  .empty { padding: 14px; color: var(--muted); font-size: 14.5px; }
+
+  footer { margin-top: 26px; color: var(--muted); font-size: 12.5px; text-align: center; line-height: 1.6; }
+  footer .stale { color: var(--wait); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="kicker">⚽ Calcetto · convocati</div>
+    <h1 id="title">Caricamento…</h1>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="status none" id="status" role="status"></div>
+
+  <section class="me" id="me" hidden>
+    <label for="who">Chi sei?</label>
+    <select id="who"><option value="">Scegli il tuo nome…</option></select>
+    <div class="verdict" id="verdict" aria-live="polite"><div class="big" id="verdict-big"></div><div class="small" id="verdict-small"></div></div>
+  </section>
+
+  <section id="lists" hidden>
+    <h2>Convocati <span id="count"></span></h2>
+    <ol id="convocati"></ol>
+    <p class="missing" id="missing" hidden></p>
+    <div class="riserve" id="riserve-box" hidden>
+      <h2>Riserve <span id="rcount"></span></h2>
+      <ol id="riserve"></ol>
+    </div>
+  </section>
+
+  <footer>
+    <div id="updated"></div>
+    <div>Conta l'ordine in cui avete risposto «Ci sono» al sondaggio nel gruppo, al secondo.<br>Chi cambia idea riparte dall'orario del nuovo voto.</div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var DAYS = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+  var DAYS_SHORT = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+  var MONTHS = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+  function $(id) { return document.getElementById(id); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function shortWhen(iso) { var d = new Date(iso); return DAYS_SHORT[d.getDay()] + ' ' + d.getDate() + '/' + (d.getMonth() + 1) + ', ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()); }
+  function longWhen(iso) { var d = new Date(iso); return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' alle ' + d.getHours() + ':' + pad(d.getMinutes()); }
+  function ordinal(n) { return n + '°'; }
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  var data = null;
+
+  function render() {
+    if (!data) return;
+    var d = data;
+    if (d.status === 'nessuna') {
+      $('title').textContent = 'Nessuna partita in programma';
+      $('meta').innerHTML = '';
+      $('status').className = 'status none';
+      $('status').innerHTML = d.nextPollAt
+        ? 'Il prossimo sondaggio arriva nel gruppo <b>' + esc(longWhen(d.nextPollAt)) + '</b>.'
+        : 'Per ora non c’è nessun sondaggio.';
+      $('me').hidden = true;
+      $('lists').hidden = true;
+    } else {
+      $('title').textContent = cap(d.label);
+      $('meta').innerHTML =
+        '<span class="chip">Campo da ' + d.field + '</span>' +
+        '<span class="chip">' + (d.keepers ? 'Con i portieri' : 'Senza portieri') + '</span>' +
+        '<span class="chip">' + d.needed + ' posti</span>';
+      if (d.status === 'definitiva') {
+        $('status').className = 'status final';
+        $('status').innerHTML = '✅ <span><b>Lista definitiva</b>' + (d.lineupSentAt ? ', uscita ' + esc(longWhen(d.lineupSentAt)) : '') + '.</span>';
+      } else {
+        $('status').className = 'status live';
+        $('status').innerHTML = '⏳ <span><b>Lista provvisoria</b>, cambia a ogni voto.' + (d.lineupAt && Date.parse(d.lineupAt) > Date.now() ? ' La definitiva esce <b>' + esc(longWhen(d.lineupAt)) + '</b>.' : '') + '</span>';
+      }
+      $('lists').hidden = false;
+      $('count').textContent = d.convocati.length + '/' + d.needed;
+      $('convocati').innerHTML = d.convocati.length
+        ? d.convocati.map(function (p, i) { return row(p, i, false); }).join('')
+        : '<li class="empty">Nessuno ha ancora risposto «Ci sono».</li>';
+      $('missing').hidden = !d.missing;
+      $('missing').textContent = d.missing === 1 ? 'Manca 1 giocatore.' : 'Mancano ' + d.missing + ' giocatori.';
+      $('riserve-box').hidden = !d.riserve.length;
+      $('rcount').textContent = String(d.riserve.length);
+      $('riserve').innerHTML = d.riserve.map(function (p, i) { return row(p, i, true); }).join('');
+      renderMe();
+    }
+    var updated = new Date(d.updatedAt);
+    var stale = Date.now() - updated.getTime() > 36 * 3600 * 1000 && d.status !== 'nessuna';
+    $('updated').innerHTML = (stale ? '<span class="stale">' : '<span>') + 'Aggiornata ' + esc(shortWhen(d.updatedAt).replace(', ', ' alle ')) + '</span>';
+  }
+
+  function row(p, i, reserve) {
+    var mine = store.get('calcetto.me') === p.name ? ' class="mine"' : '';
+    return '<li' + mine + '><span class="n">' + (i + 1) + '</span><span class="who">' + esc(p.name) + '</span>' +
+      (p.at ? '<span class="t">' + esc(shortWhen(p.at)) + '</span>' : '') + '</li>';
+  }
+
+  function renderMe() {
+    var d = data;
+    var names = d.convocati.concat(d.riserve).map(function (p) { return p.name; });
+    var saved = store.get('calcetto.me') || '';
+    var options = '<option value="">Scegli il tuo nome…</option>' + names.slice().sort(function (a, b) { return a.localeCompare(b, 'it'); })
+      .map(function (n) { return '<option' + (n === saved ? ' selected' : '') + '>' + esc(n) + '</option>'; }).join('') +
+      '<option value="?"' + (saved === '?' ? ' selected' : '') + '>Non sono in elenco</option>';
+    $('who').innerHTML = options;
+    $('me').hidden = false;
+    var v = $('verdict');
+    if (!saved) { v.className = 'verdict'; return; }
+    var i = indexOf(d.convocati, saved);
+    var r = indexOf(d.riserve, saved);
+    var final = d.status === 'definitiva';
+    if (i >= 0) {
+      v.className = 'verdict show yes';
+      $('verdict-big').textContent = final ? 'Sei convocato ✅' : 'Per ora sei dentro';
+      $('verdict-small').textContent = ordinal(i + 1) + ' su ' + d.needed + (final ? '. Ci vediamo ' + d.label.split(' ')[0] + '!' : '. La lista definitiva esce domenica.');
+    } else if (r >= 0) {
+      v.className = 'verdict show wait';
+      $('verdict-big').textContent = (r === 0 ? 'Prima' : ordinal(r + 1)) + ' riserva';
+      $('verdict-small').textContent = final ? 'Se qualcuno dà forfait, tocca a te.' : 'Per ora sei fuori dai ' + d.needed + ': se qualcuno cambia idea, sali.';
+    } else {
+      v.className = 'verdict show no';
+      $('verdict-big').textContent = 'Non risulti tra i «Ci sono»';
+      $('verdict-small').textContent = final ? 'La lista è chiusa: chiedi nel gruppo.' : 'Vota «Ci sono» nel sondaggio del gruppo per entrare in lista.';
+    }
+  }
+
+  function indexOf(list, name) {
+    for (var i = 0; i < list.length; i++) if (list[i].name === name) return i;
+    return -1;
+  }
+
+  $('who').addEventListener('change', function () {
+    store.set('calcetto.me', this.value);
+    render();
+  });
+
+  function load() {
+    // Su GitHub Pages: dati.json accanto alla pagina. In anteprima da Lucy: l'API.
+    var local = /\/calcetto\/pubblica\/?$/.test(location.pathname);
+    var url = local ? '/api/calcetto/public' : 'dati.json?t=' + Date.now();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onload = function () {
+      if (xhr.status !== 200) return failed();
+      try { data = JSON.parse(xhr.responseText); render(); } catch (e) { failed(); }
+    };
+    xhr.onerror = failed;
+    xhr.send();
+  }
+  function failed() {
+    if (data) return;
+    $('title').textContent = 'Lista non disponibile';
+    $('status').className = 'status none';
+    $('status').textContent = 'Non riesco a caricare la lista. Riprova tra poco.';
+  }
+
+  load();
+  setInterval(load, 60 * 1000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) load(); });
+})();
+</script>
+</body>
+</html>
