@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-13T11:28:18.833Z",
+ "updatedAt": "2026-10-13T11:28:20.711Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 7,
  "keepers": false,
@@ -10,9 +10,58 @@
  "week": "2026-10-19",
  "label": "lunedì 19 ottobre",
  "status": "provvisoria",
- "convocati": [],
+ "convocati": [
+  {
+   "name": "Pierandrea Con.",
+   "at": "2026-10-13T11:28:19.338Z"
+  },
+  {
+   "name": "Stefano Pre.",
+   "at": "2026-10-13T11:28:19.707Z"
+  },
+  {
+   "name": "Riccardo Lit.",
+   "at": "2026-10-13T11:28:19.720Z"
+  },
+  {
+   "name": "Riccardo Pan.",
+   "at": "2026-10-13T11:28:19.799Z"
+  },
+  {
+   "name": "Andrea",
+   "at": "2026-10-13T11:28:19.916Z"
+  },
+  {
+   "name": "Gabriele",
+   "at": "2026-10-13T11:28:19.931Z"
+  },
+  {
+   "name": "Pierfra Cai.",
+   "at": "2026-10-13T11:28:19.934Z"
+  },
+  {
+   "name": "D📧DO",
+   "at": "2026-10-13T11:28:20.077Z"
+  },
+  {
+   "name": "Federico",
+   "at": "2026-10-13T11:28:20.191Z"
+  },
+  {
+   "name": "Speedy",
+   "at": "2026-10-13T11:28:20.196Z"
+  },
+  {
+   "name": "Carlo Cam.",
+   "at": "2026-10-13T11:28:20.375Z"
+  },
+  {
+   "name": "francesco Ant.",
+   "at": "2026-10-13T11:28:20.458Z"
+  }
+ ],
  "riserve": [],
- "missing": 14,
+ "missing": 2,
  "lineupAt": "2026-10-18T08:00:00.000Z",
  "lineupSentAt": null
 }
