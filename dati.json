@@ -1,10 +1,10 @@
 {
  "version": 1,
- "updatedAt": "2026-10-17T18:03:41.349Z",
+ "updatedAt": "2026-10-17T18:50:33.064Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
- "field": 7,
+ "field": 8,
  "keepers": true,
- "needed": 12,
+ "needed": 14,
  "nextPollAt": "2026-10-20T11:28:00.000Z",
  "nextWeek": "2026-10-26",
  "week": "2026-10-19",
@@ -58,9 +58,7 @@
   {
    "name": "francesco Ant.",
    "at": "2026-10-13T11:28:20.458Z"
-  }
- ],
- "riserve": [
+  },
   {
    "name": "Riccardo Pan.",
    "at": "2026-10-13T11:28:24.258Z"
@@ -68,7 +66,9 @@
   {
    "name": "Giulio Mel.",
    "at": "2026-10-13T11:28:25.624Z"
-  },
+  }
+ ],
+ "riserve": [
   {
    "name": "Diego",
    "at": "2026-10-13T11:28:27.111Z"
