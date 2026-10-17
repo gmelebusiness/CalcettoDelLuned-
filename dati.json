@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-17T18:50:33.064Z",
+ "updatedAt": "2026-10-17T18:56:36.096Z",
  "title": "Sondaggio automatico - Lunedì prossimo",
  "field": 8,
  "keepers": true,
@@ -56,23 +56,19 @@
    "at": "2026-10-13T11:28:20.375Z"
   },
   {
-   "name": "francesco Ant.",
-   "at": "2026-10-13T11:28:20.458Z"
-  },
-  {
    "name": "Riccardo Pan.",
    "at": "2026-10-13T11:28:24.258Z"
   },
   {
    "name": "Giulio Mel.",
    "at": "2026-10-13T11:28:25.624Z"
-  }
- ],
- "riserve": [
+  },
   {
    "name": "Diego",
    "at": "2026-10-13T11:28:27.111Z"
-  },
+  }
+ ],
+ "riserve": [
   {
    "name": "Alessandro Asd.",
    "at": "2026-10-13T11:28:31.095Z"
